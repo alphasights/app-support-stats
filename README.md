@@ -1,4 +1,4 @@
-## Intercom Integration
+## App Support Stats
 
 Idea by: Elina Yu
 
