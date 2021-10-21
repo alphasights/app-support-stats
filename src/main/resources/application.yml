@@ -1,0 +1,12 @@
+server:
+  log-http-requests: true
+  port: 8080
+  max-http-header-size: 200KB
+logging.level:
+  com.alphasights: INFO
+  org.apache.tomcat: WARN
+  org.apache.catalina: WARN
+spring:
+  application:
+    name: app-support-stats
+    environment: unknown

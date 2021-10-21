@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: local.Dockerfile
+    image: app-support-stats:0.0.1-SNAPSHOT
+    environment:
+      SPRING_PROFILES_ACTIVE: ${ACTIVE_PROFILE:-local}
+    ports:
+    - ${PORT:-8080}:8080
+    volumes:
+    - ./src/main/resources/application-local.yml:/app/config/application-local.yml:ro
+    - ./src/main/resources/application.yml:/app/config/application.yml:ro
+    - ./build/libs/app-support-stats-0.0.1-SNAPSHOT.jar:/app/app.jar
+    restart: unless-stopped
