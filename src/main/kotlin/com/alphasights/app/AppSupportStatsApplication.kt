@@ -9,9 +9,8 @@ class AppSupportStatsApplication(
 ) {
     val intercomService = IntercomService()
     fun makeCall() {
-//        intercomService.getAllTags()
-        intercomService.searchConversations()
-
+        val tags = listOf("""${"$"}comms""","""${"$"}Knowledge Capture""")
+        val appSupportReport = intercomService.searchConversations(tags)
     }
 }
 
