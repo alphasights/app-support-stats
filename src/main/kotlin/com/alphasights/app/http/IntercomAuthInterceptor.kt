@@ -12,8 +12,8 @@ class IntercomInterceptor : Interceptor {
 
         // TODO: Implement proper header to include the accessToken
         val basicAuthRequest = request.newBuilder()
-            .addHeader("Authorization", accessToken) // this should be modified to make sure it matches what intercom expects
-            .addHeader("Content-Type", "application/json")
+            .addHeader("Authorization", "Bearer $accessToken") // this should be modified to make sure it matches what intercom expects
+            .addHeader("Accept", "application/json")
             .build()
 
         return chain.proceed(basicAuthRequest)
