@@ -1,4 +1,4 @@
-package com.alphasights.app.model
+package com.alphasights.app.model.intercom
 
 data class Conversation(
     val admin_assignee_id: Int,
