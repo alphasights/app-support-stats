@@ -1,4 +1,4 @@
-package com.alphasights.app.model
+package com.alphasights.app.model.intercom
 
 data class ConversationParts(
     val conversation_parts: List<ConversationPart>,
