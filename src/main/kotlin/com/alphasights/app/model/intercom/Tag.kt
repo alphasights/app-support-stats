@@ -1,4 +1,4 @@
-package com.alphasights.app.model
+package com.alphasights.app.model.intercom
 
 data class Tag(
     val id: String,

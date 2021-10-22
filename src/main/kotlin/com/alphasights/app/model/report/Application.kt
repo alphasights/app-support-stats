@@ -1,4 +1,4 @@
-package com.alphasights.app.model
+package com.alphasights.app.model.report
 
 data class Application(
     val name: String,
