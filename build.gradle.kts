@@ -30,6 +30,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springdoc:springdoc-openapi-ui:1.5.9")
     implementation("com.squareup.okhttp3:okhttp:4.2.0")
+    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.1.0")
     compileOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
