@@ -174,7 +174,7 @@ class IntercomService {
                             userEdCount++
                         } else if (it.name.equals("_issue_")){
                             issueCount++
-                        } else if (it.name.equals("_administrative_")){
+                        } else if (it.name.equals("_admininstrative_")){
                             adminCount++
                         } else if (it.name.equals("_feedback_")){
                             feedbackCount++
@@ -196,11 +196,12 @@ class IntercomService {
                     (teamsHash[applicationTeam]?.applications as MutableList).add(application)
 //                    teamsHash[applicationTeam]?.totalTicketsCount =
 //                        teamsHash[applicationTeam]?.totalTicketsCount?.plus(it.value.size)!!
+                    teamsHash[applicationTeam]?.totalTicketsCount = userEdCount + issueCount + adminCount + feedbackCount;
                 }
+
             }
-            teamsHash.forEach {
-                it.value.totalTicketsCount = groupedTeamConversations[it.key]?.size ?: 0
-            }
+//            teamsHash.forEach {
+//            }
 
             var totalCount = 0
             val teams = teamsHash.map {
